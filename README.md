@@ -6,7 +6,6 @@ This is an unsupervised learning process with a recommendation system and deploy
 To run the app, you will need to create your a token and use the username from the same account. It is recommended that all notebooks be ran in order from 01 to 04 in order to reproduce my results and test out additional data. You can retrieve the data and vector spaces used in this project through [Google Drive](https://drive.google.com/drive/folders/175Ao-k5lTlRp8Jr07gHohmMC0nghITZ5?usp=sharing).
 
 ## Repository Structure
-`
 project-3
 |__ app
 |   |__app.py
@@ -28,7 +27,6 @@ project-3
 |   |__04_Recommender.ipynb
 |__ presentation-slides.pdf
 |__ README.md
-`
 
 
 # Executive Summary:
