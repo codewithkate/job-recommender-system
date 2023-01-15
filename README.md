@@ -22,7 +22,7 @@ project-3
 |   |  |__postings_mendeley.csv
 |   |__test-README.text
 |__ notebooks
-|   |__01_Wrangling.ipynb
+|   |__[01_Wrangling.ipynb][nb-01]
 |   |__02_NLP.ipynb
 |   |__03_Mining.ipynb
 |   |__04_Recommender.ipynb
@@ -51,3 +51,7 @@ project-3
   Using the application I built for this project, I tested a corpus containing all the portfolio projects scraped from my GitHub repositories using the Beautiful Soup, Octokit, and Requests libraries and a unique access token. With more information, the system was able to infer that my projects were related to data science and recommended positions related to data science. The parts of speech that were output provided insight into why the system came to this conclusion. Some adjectives the systems used to describe the closeness of the test to the train were 'analytical, statistical, and mathematic.' However, there were words, like internal and strong, that I could make better sense of if I were to rework the model to take context into account. 
 ## Conclusion and Recommendations
   Overall, the model achieved the goal of outputting job recommendations based on the content of a portfolio. Outputing location data provided more insights into where these jobs could be found. As a job seeker open to remote work, this is an important feature to be able to expand my search to jobs closely related to particular skill or interest as expressed through projects and into markets that may not have been considered in more traditional in-person contexts. However, too little data may result in the model only producing job results related to project topics. Further testing using more project data, like notebooks or progress reports, would be interesting to evaluate. The hope would be that the model would start to produce more niche positions and/or language related to skills and software. As previously mentioned, I would also explore more models and distance measurements that are used in recommender systems.  
+
+<!--- LINKS & MATERIALS --->
+<!--- NOTEBOOKS --->
+[nb-01]: https://github.com/codewithkate/6-job-recommender/blob/main/notebooks/01_Wrangling.ipynb
