@@ -1,5 +1,6 @@
 # Overview
 Kate Crawford | GA Capstone | January 2023
+![App Preview](job-app.png)
 
 This is an unsupervised learning process with a recommendation system and deployed application that I developed for General Assembly's Data Science Capstone. You can view the slides I used during the live presentation in the presentation-slides.pdf.
 
