@@ -4,7 +4,42 @@ Kate Crawford | GA Capstone | January 2023
 
 This is an unsupervised learning process with a recommendation system and deployed application that I developed for General Assembly's Data Science Capstone. You can view the slides I used during the live presentation in the presentation-slides.pdf.
 
-To run the app, you will need to create a GitHub access token and use the username from the same account. It is recommended that all notebooks be ran in order from 01 to 04 in order to reproduce my results and test out additional data. You can retrieve the data and vector spaces used in this project through [Google Drive](https://drive.google.com/drive/folders/175Ao-k5lTlRp8Jr07gHohmMC0nghITZ5?usp=sharing).
+## Code Snippet
+One of the main features of this app is taking in user data to return best matches. The following code snippet gets up to six README files from the user's GitHub account. There is a GUI feature in the app that retrieves a username and access token as arguments for this function. I found a way to use GitHub's API with Python, Python's requests library, and HMTL code found from the target site to retrieve text data that was transformed into a vector space with the proper shape for pairwise distancing.
+
+```python
+def get_readme(username, TOKEN):
+    n_repos = 0
+    readmes = []
+    
+    repos = Octokit().repos.list_for_user(username=username)
+    for repo in repos.json:
+        project = repo["name"]
+
+        token = TOKEN
+        headers = {'Authorization': 'token ' + token}
+
+        # url to request
+        url = f"https://github.com/codewithkate/{project}"
+
+        # make the request and return the json
+        r = requests.get(url, headers=headers)
+        soup = BeautifulSoup(r.content, 'html.parser')
+        # scrape raw text data from readme file on main branch
+        readme = soup.find("div", {"class":"Box md js-code-block-container js-code-nav-container js-tagsearch-file Box--responsive"}).text.replace('\n', '')
+        readmes.append(readme)
+        
+        # Increment repo counter until max 6 repos
+        n_repos += 1
+        if n_repos <= 6:
+            break
+            
+        time.sleep(2)
+        
+    return ''.join(readmes)
+```
+
+To run the app, you will need to download the `app` folder, create a GitHub access token and use the username from the same account, and run `$python app.py` in the terminal. However, it is recommended that you test this out in using the notebook found in the project's [Google Drive](https://drive.google.com/drive/folders/175Ao-k5lTlRp8Jr07gHohmMC0nghITZ5?usp=sharing).
 
 ## Repository Structure
 ```
