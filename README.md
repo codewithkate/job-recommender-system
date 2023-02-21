@@ -1,8 +1,7 @@
 # Overview
 Kate Crawford | GA Capstone | January 2023
-![App Preview](job-app.png)
-
 This is an unsupervised learning process with a recommendation system and deployed application that I developed for General Assembly's Data Science Capstone. You can view the slides I used during the live presentation in the presentation-slides.pdf.
+![App Preview](job-app.png)
 
 ## Code Snippet
 One of the main features of this app is taking in user data to return best matches. The following code snippet gets up to six README files from the user's GitHub account. There is a GUI feature in the app that retrieves a username and access token as arguments for this function. I found a way to use GitHub's API with Python, Python's requests library, and HMTL code found from the target site to retrieve text data that was transformed into a vector space with the proper shape for pairwise distancing.
