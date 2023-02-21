@@ -4,7 +4,7 @@ Kate Crawford | GA Capstone | January 2023
 
 This is an unsupervised learning process with a recommendation system and deployed application that I developed for General Assembly's Data Science Capstone. You can view the slides I used during the live presentation in the presentation-slides.pdf.
 
-To run the app, you will need to create your a token and use the username from the same account. It is recommended that all notebooks be ran in order from 01 to 04 in order to reproduce my results and test out additional data. You can retrieve the data and vector spaces used in this project through [Google Drive](https://drive.google.com/drive/folders/175Ao-k5lTlRp8Jr07gHohmMC0nghITZ5?usp=sharing).
+To run the app, you will need to create a GitHub access token and use the username from the same account. It is recommended that all notebooks be ran in order from 01 to 04 in order to reproduce my results and test out additional data. You can retrieve the data and vector spaces used in this project through [Google Drive](https://drive.google.com/drive/folders/175Ao-k5lTlRp8Jr07gHohmMC0nghITZ5?usp=sharing).
 
 ## Repository Structure
 ```
